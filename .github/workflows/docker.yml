@@ -24,10 +24,6 @@ jobs:
 
       - name: Build Image
         run: |
-         docker build -t ghcr.io/$REPO_LC/cicd-app:${{ github.sha }} .
-
-      - name: Build Image
-        run: |
           docker build -t ghcr.io/${{ github.repository }}/cicd-app:${{ github.sha }} .
 
       - name: Push Image
